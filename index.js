@@ -7,9 +7,9 @@
 // Donner un style de transparence aux 2 plus gros ronds (mix-blend-mode)
 
 const mouses = document.querySelectorAll(".mouse");
-// const cursor = document.querySelector("#cursor");
-// const mouse1 = document.querySelector("#mouse1");
-// const mouse2 = document.querySelector("#mouse2");
+const cursor = document.querySelector("#cursor");
+const mouse1 = document.querySelector("#mouse1");
+const mouse2 = document.querySelector("#mouse2");
 
 window.addEventListener("mousemove", (e) => {
   // cursor.style.left = e.x + "px";
@@ -18,9 +18,8 @@ window.addEventListener("mousemove", (e) => {
   // mouse1.style.top = e.y + "px";
   // mouse2.style.left = e.x + "px";
   // mouse2.style.top = e.y + "px";
-
   mouses.forEach((mouse) => {
-    mouse.style.left = e.x + "px";
-    mouse.style.top = e.y + "px";
+    mouse.style.left = e.pageX + "px";
+    mouse.style.top = e.pageY + "px";
   });
 });
